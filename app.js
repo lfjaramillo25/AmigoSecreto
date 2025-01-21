@@ -8,9 +8,19 @@ function agregarAmigo(){
     }else{
         //Ingresamos el valor del campo a al array amigo
         amigos.push(document.getElementById("amigo").value);
-        console.log(amigos);
+        // Limpiamos la lista antes imprimir sobre ella
+        document.getElementById("listaAmigos").innerHTML="";
+        //Ciclo for para recorrer el array amigos
+        for (let i = 0; i < amigos.length; i++){
+            //Creamos un objeto li 
+            const listItem = document.createElement('li');
+            //agregamos un texto al li con los elmentos del array
+            listItem.textContent = amigos[i];
+            //agregarmos al ul el li 
+            document.getElementById("listaAmigos").appendChild(listItem);
+        }
         //Borramos el campo de entrada para que el usuario pueda ingresar nuevamente otro nombre
         document.getElementById("amigo").value = "";
     }
-     
+    
 }
