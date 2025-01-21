@@ -24,15 +24,11 @@ function agregarAmigo(){
     }
     
 }
-//Esta funcion sortea del array de amigos
 function sortearAmigo(){
-    //Verificamos si el array esta vacio
     if (amigos.length <= 1) {
         alert("¡No hay suficientes amigos en tu lista! por lo menos agrega un par.");
       } else {
-        //se escoge al azar una posicion ganadora dentro del array
         const posicionGanador = Math.floor(Math.random()*amigos.length+1);
-        //imprimimos el array en el DOM
         document.getElementById("resultado").innerHTML = amigos[posicionGanador-1];  
       }
 }
