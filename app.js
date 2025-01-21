@@ -24,11 +24,3 @@ function agregarAmigo(){
     }
     
 }
-function sortearAmigo(){
-    if (amigos.length <= 1) {
-        alert("¡No hay suficientes amigos en tu lista! por lo menos agrega un par.");
-      } else {
-        const posicionGanador = Math.floor(Math.random()*amigos.length+1);
-        document.getElementById("resultado").innerHTML = amigos[posicionGanador-1];  
-      }
-}
