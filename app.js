@@ -30,6 +30,8 @@ function sortearAmigo(){
     if (amigos.length <= 1) {
         alert("¡No hay suficientes amigos en tu lista! por lo menos agrega un par.");
       } else {
+        // limpiamos la lista antes de mostrar el resultado
+        document.getElementById("listaAmigos").innerHTML="";
         //se escoge al azar una posicion ganadora dentro del array
         const posicionGanador = Math.floor(Math.random()*amigos.length+1);
         //imprimimos el array en el DOM
